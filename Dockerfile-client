@@ -1,5 +1,5 @@
 # Build application
-FROM node:alpine as builder
+FROM node:14-alpine as builder
 RUN apk add --no-cache git
 
 WORKDIR /app/client/
