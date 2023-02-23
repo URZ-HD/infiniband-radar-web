@@ -6,11 +6,10 @@ WORKDIR /app/client/
 
 COPY client/package.json client/package-lock.json /app/client/
 COPY .git /app/
-RUN cd /app/client && npm set progress=false && npm install
-
+RUN cd /app/client && npm set progress=false && npm install && npm audit fix
 
 COPY common/ /app/common
-RUN cd /app/common/3dparty/vis && npm install
+RUN cd /app/common/3dparty/vis && npm install && npm audit fix
 
 COPY client/ /app/client
 RUN cd /app/client && npm run build

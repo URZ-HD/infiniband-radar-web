@@ -6,6 +6,7 @@ data
 **/dist
 ssl_certs
 server/last_dump.json
+*~
 
 # Created by https://www.gitignore.io/api/node,webstorm,python
 
