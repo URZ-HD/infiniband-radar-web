@@ -1,6 +1,5 @@
 const path = require('path');
 const webpack = require('webpack');
-const GoogleFontsPlugin = require("@beyonk/google-fonts-webpack-plugin");
 
 module.exports = {
     configureWebpack: {
@@ -26,11 +25,7 @@ module.exports = {
                 $: 'jquery',
                 jQuery: 'jquery',
             }),
-            new GoogleFontsPlugin({
-                fonts: [
-                    { family: 'Roboto', variants: [ '400' ] }
-                ],
-            }),
+            new webpack.NoEmitOnErrorsPlugin(),
         ]
     },
     devServer: {
